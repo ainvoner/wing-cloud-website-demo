@@ -55,6 +55,10 @@ api.post("/users", postHandler);
 
 website.addJson("config.json", { apiUrl: api.url });
 
+test "Console" {
+  log("this is a test");
+}
+
 test "GET /users" {
   let response = http.fetch(api.url + "/users", {
     method: http.HttpMethod.GET,
